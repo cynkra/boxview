@@ -1,0 +1,19 @@
+Package: boxview
+Title: Display the Code of a Function in Nested Boxes
+Version: 0.0.0.9000
+Authors@R: 
+    person("Antoine", "Fabri", , "antoine.fabri@gmail.com", role = c("aut", "cre"))
+Description: Functions containing a lot of control flow constructs can be hard
+  to decipher. By displaying them into boxes and presenting the 'yes' and 'no'
+  clauses of 'if' calls side by side we make their logic easier to grasp.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2.9000
+Imports: 
+    cli,
+    rlang,
+    styler
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
