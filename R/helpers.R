@@ -22,9 +22,15 @@ header_for <- function(call, width) {
   header <- header[1:2]
   header[[2]] <- call("?", call[[2]], call[[3]])
   header[[1]] <- quote(.for)
+  n_sym_chr <- nchar(as.character(call[[2]]))
   header_chr <- cli::code_highlight(rlang::expr_deparse(header, width = width))
   header_chr <- paste(header_chr, collapse = "\n")
-  header_chr <- paste0(ansi_for(), cli::ansi_substring(header_chr, 5))
+  header_chr <- paste0(
+    ansi_for(),
+    cli::ansi_substring(header_chr, 5, 5 + n_sym_chr + 1),
+    ansi_in(),
+    cli::ansi_substring(header_chr, 5 + n_sym_chr + 3)
+    )
   header_chr <- strsplit(header_chr, "\n")[[1]]
 }
 
