@@ -17,3 +17,5 @@ Imports:
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+URL: https://github.com/cynkra/boxview
+BugReports: https://github.com/cynkra/boxview/issues
