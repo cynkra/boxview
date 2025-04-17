@@ -64,3 +64,21 @@
       | x                             |
       └───────────────────────────────┘
 
+# swapcall() snapshots
+
+    Code
+      swap_calls(quote({
+        a <- if (this) {
+          if (this) a else b
+        } else b
+      }))
+    Output
+      {
+          if (this) {
+              if (this) 
+                  a <- a
+              else a <- b
+          }
+          else a <- b
+      }
+
